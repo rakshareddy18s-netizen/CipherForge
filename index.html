@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CipherForge | Secure Password Generator</title>
+
+  <meta
+    name="description"
+    content="CipherForge is a secure browser-based password generator built using HTML, CSS and JavaScript."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= BACKGROUND ================= -->
+
+  <div class="professional-bg"></div>
+  <div class="background-glow background-glow--one"></div>
+  <div class="background-glow background-glow--two"></div>
+
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav class="topnav">
+
+    <a href="#top" class="brand">
+      <span class="brand__mark">◈</span>
+      <span class="brand__name">CIPHERFORGE</span>
+    </a>
+
+    <div class="nav-actions">
+      <a href="#about" class="navlink navlink--simple">About</a>
+      <a href="#features" class="navlink navlink--simple">Features</a>
+      <a href="#generator" class="navlink">
+        Open Generator
+      </a>
+    </div>
+
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <header class="hero" id="top">
+
+    <div class="hero__eyebrow">
+      SECURE • PRIVATE • BROWSER-BASED
+    </div>
+
+    <h1 class="hero__title">
+      Generate stronger passwords.
+      <br>
+      Protect your digital identity.
+    </h1>
+
+    <p class="hero__subtitle">
+      CipherForge is a secure password generator that creates strong,
+      customizable passwords directly inside your browser.
+      Your generated passwords are never stored or sent anywhere.
+    </p>
+
+    <div class="hero__actions">
+
+      <a href="#generator" class="btn btn--cta">
+        Generate Password
+        <span class="arrow">↓</span>
+      </a>
+
+      <a href="#about" class="btn btn--secondary">
+        Learn More
+      </a>
+
+    </div>
+
+
+    <!-- Project technologies -->
+
+    <div class="tech-stack">
+
+      <span class="tech-stack__label">BUILT WITH</span>
+
+      <div class="tech-stack__items">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>Web Crypto API</span>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= ABOUT ================= -->
+
+  <section class="section section--about" id="about">
+
+    <div class="section-heading">
+
+      <span class="section-heading__eyebrow">
+        ABOUT THE PROJECT
+      </span>
+
+      <h2>
+        A simple approach to stronger password security.
+      </h2>
+
+      <p>
+        CipherForge was designed to help users create secure passwords
+        without relying on predictable patterns or weak combinations.
+        Passwords are generated locally using the browser's cryptographic
+        functionality.
+      </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+      <article class="info-card">
+
+        <span class="info-card__icon">
+          01
+        </span>
+
+        <h3>
+          Privacy First
+        </h3>
+
+        <p>
+          Passwords are generated locally inside the user's browser.
+          No password information is stored, uploaded or transmitted.
+        </p>
+
+      </article>
+
+
+      <article class="info-card">
+
+        <span class="info-card__icon">
+          02
+        </span>
+
+        <h3>
+          Customizable
+        </h3>
+
+        <p>
+          Users can choose password length and control whether uppercase
+          letters, lowercase letters, numbers and symbols are included.
+        </p>
+
+      </article>
+
+
+      <article class="info-card">
+
+        <span class="info-card__icon">
+          03
+        </span>
+
+        <h3>
+          Security Focused
+        </h3>
+
+        <p>
+          Password generation uses the browser's Web Crypto API to produce
+          stronger random values instead of relying on basic randomization.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FEATURES ================= -->
+
+  <section class="section section--features" id="features">
+
+    <div class="section-heading">
+
+      <span class="section-heading__eyebrow">
+        CORE FEATURES
+      </span>
+
+      <h2>
+        Everything needed to create a stronger password.
+      </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+      <div class="feature-item">
+        <span class="feature-item__number">01</span>
+
+        <div>
+          <h3>Password Length Control</h3>
+          <p>
+            Choose a password length between 4 and 32 characters.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="feature-item">
+        <span class="feature-item__number">02</span>
+
+        <div>
+          <h3>Character Selection</h3>
+          <p>
+            Include uppercase, lowercase, numbers and symbols.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="feature-item">
+        <span class="feature-item__number">03</span>
+
+        <div>
+          <h3>Password Strength Indicator</h3>
+          <p>
+            Instantly view whether the generated password is weak,
+            medium or strong.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="feature-item">
+        <span class="feature-item__number">04</span>
+
+        <div>
+          <h3>One-Click Copy</h3>
+          <p>
+            Copy generated passwords directly to the clipboard.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= GENERATOR SECTION ================= -->
+
+  <section class="generator-section" id="generator">
+
+    <div class="generator-intro">
+
+      <span class="section-heading__eyebrow">
+        PASSWORD GENERATOR
+      </span>
+
+      <h2>
+        Create your secure password.
+      </h2>
+
+      <p>
+        Configure the settings below and generate a password instantly.
+      </p>
+
+    </div>
+
+
+    <!-- Generator Card -->
+
+    <main class="console">
+
+      <header class="console__header">
+
+        <div class="brand">
+          <span class="brand__mark">◈</span>
+          <span class="brand__name">CIPHERFORGE</span>
+        </div>
+
+        <span class="brand__tag">
+          SECURE GENERATOR
+        </span>
+
+      </header>
+
+
+      <!-- Generated password -->
+
+      <section
+        class="readout"
+        aria-label="Generated password"
+      >
+
+        <div class="readout__label">
+
+          <span>
+            GENERATED PASSWORD
+          </span>
+
+          <span id="charCount">
+            0 chars
+          </span>
+
+        </div>
+
+
+        <div class="readout__row">
+
+          <div
+            class="readout__field"
+            id="passwordField"
+          >
+
+            <span id="passwordText">
+              Press generate to begin
+            </span>
+
+            <span
+              class="cursor"
+              aria-hidden="true"
+            ></span>
+
+          </div>
+
+
+          <button
+            class="btn btn--icon"
+            id="copyBtn"
+            title="Copy password"
+            aria-label="Copy password to clipboard"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <path
+                fill="currentColor"
+                d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"
+              />
+            </svg>
+
+          </button>
+
+        </div>
+
+
+        <div
+          class="copied-msg"
+          id="copiedMsg"
+        >
+          Password copied
+        </div>
+
+      </section>
+
+
+      <!-- Password Strength -->
+
+      <section
+        class="strength"
+        aria-label="Password strength"
+      >
+
+        <span class="strength__title">
+          Strength
+        </span>
+
+        <div
+          class="strength__bars"
+          id="strengthBars"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <span
+          class="strength__label"
+          id="strengthLabel"
+        >
+          —
+        </span>
+
+      </section>
+
+
+      <!-- Generator controls -->
+
+      <section class="controls">
+
+        <!-- Length -->
+
+        <div class="control-row">
+
+          <label for="lengthSlider">
+            LENGTH
+          </label>
+
+          <input
+            type="range"
+            id="lengthSlider"
+            min="4"
+            max="32"
+            value="14"
+          >
+
+          <span
+            class="control-row__value"
+            id="lengthValue"
+          >
+            14
+          </span>
+
+        </div>
+
+
+        <!-- Character options -->
+
+        <div class="options-heading">
+          CHARACTER TYPES
+        </div>
+
+
+        <div class="toggles">
+
+          <label class="toggle">
+
+            <input
+              type="checkbox"
+              id="optUpper"
+              checked
+            >
+
+            <span class="toggle__box"></span>
+
+            <span class="toggle__text">
+              Uppercase A–Z
+            </span>
+
+          </label>
+
+
+          <label class="toggle">
+
+            <input
+              type="checkbox"
+              id="optLower"
+              checked
+            >
+
+            <span class="toggle__box"></span>
+
+            <span class="toggle__text">
+              Lowercase a–z
+            </span>
+
+          </label>
+
+
+          <label class="toggle">
+
+            <input
+              type="checkbox"
+              id="optNumbers"
+              checked
+            >
+
+            <span class="toggle__box"></span>
+
+            <span class="toggle__text">
+              Numbers 0–9
+            </span>
+
+          </label>
+
+
+          <label class="toggle">
+
+            <input
+              type="checkbox"
+              id="optSymbols"
+            >
+
+            <span class="toggle__box"></span>
+
+            <span class="toggle__text">
+              Symbols !@#
+            </span>
+
+          </label>
+
+        </div>
+
+
+        <!-- Error -->
+
+        <p
+          class="error-msg"
+          id="errorMsg"
+        >
+          Please select at least one character type.
+        </p>
+
+
+        <!-- Generate -->
+
+        <button
+          class="btn btn--primary"
+          id="generateBtn"
+        >
+          <span>
+            GENERATE SECURE PASSWORD
+          </span>
+        </button>
+
+      </section>
+
+
+      <footer class="console__footer">
+
+        <span class="security-dot"></span>
+
+        Generated securely in your browser.
+        Nothing is stored or transmitted.
+
+      </footer>
+
+    </main>
+
+  </section>
+
+
+  <!-- ================= HOW IT WORKS ================= -->
+
+  <section class="section section--process">
+
+    <div class="section-heading">
+
+      <span class="section-heading__eyebrow">
+        HOW IT WORKS
+      </span>
+
+      <h2>
+        Generate a password in three simple steps.
+      </h2>
+
+    </div>
+
+
+    <div class="how">
+
+      <article class="how__step">
+
+        <span class="how__num">
+          01
+        </span>
+
+        <h3>
+          Configure
+        </h3>
+
+        <p>
+          Select your required password length and character types.
+        </p>
+
+      </article>
+
+
+      <article class="how__step">
+
+        <span class="how__num">
+          02
+        </span>
+
+        <h3>
+          Generate
+        </h3>
+
+        <p>
+          CipherForge securely generates a random password inside
+          your browser.
+        </p>
+
+      </article>
+
+
+      <article class="how__step">
+
+        <span class="how__num">
+          03
+        </span>
+
+        <h3>
+          Copy & Use
+        </h3>
+
+        <p>
+          Check the password strength and copy it to your clipboard.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="site-footer">
+
+    <div class="site-footer__brand">
+
+      <div class="brand">
+        <span class="brand__mark">◈</span>
+        <span class="brand__name">
+          CIPHERFORGE
+        </span>
+      </div>
+
+      <p>
+        Secure Password Generator
+      </p>
+
+    </div>
+
+
+    <div class="site-footer__right">
+
+      <p>
+        Personal Web Development Project
+      </p>
+
+      <span>
+        HTML • CSS • JavaScript
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
